@@ -25,10 +25,28 @@ timelineImages.forEach((img) => {
   const correspondingPanel = img.querySelector(".info-panel");
 
   img.addEventListener("mouseenter", () => {
-    console.log(correspondingPanel);
     correspondingPanel.classList.add("hovered");
   });
   img.addEventListener("mouseleave", () => {
     correspondingPanel.classList.remove("hovered");
   });
 });
+
+function checkAndDisableLinks() {
+  const iconWrappers = document.querySelectorAll(".icon-wrapper");
+  iconWrappers.forEach((wrapper) => {
+    let wrapperLinks = wrapper.querySelectorAll("a");
+    wrapperLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const grandparent = link.parentElement.parentElement;
+        const gpOpacity = window
+          .getComputedStyle(grandparent)
+          .getPropertyValue("opacity");
+
+        if (gpOpacity === "0") {
+          e.preventDefault(); // Prevent the default action (navigation)
+        }
+      });
+    });
+  });
+}
