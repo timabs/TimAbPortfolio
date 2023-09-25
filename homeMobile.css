@@ -1,0 +1,17 @@
+.menu-container.active {
+  grid-template-rows: minmax(10%, auto) auto;
+  width: fit-content;
+  height: fit-content;
+  background-color: #1b1b1b;
+  transition: all 350ms;
+  margin-top: 0%;
+}
+.burger-menu {
+  width: 5vw;
+  height: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 10%;
+}
