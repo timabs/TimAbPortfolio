@@ -116,6 +116,12 @@ body {
   margin-left: 50%;
   margin-top: 15%;
 }
+.nav a:hover {
+  background-color: unset;
+  color: unset;
+  padding: unset;
+  border-radius: unset;
+}
 /*Main PRJs section styling*/
 .prj-wrapper {
   display: flex;
