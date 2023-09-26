@@ -12,6 +12,15 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.fixed-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #46484f, #202124, #161618);
+  z-index: -1;
+}
 #toTop {
   position: absolute;
   height: 0;
@@ -21,7 +30,7 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  background-color: #202124;
+  background: #202124;
   color: aliceblue;
   font-family: "PTSans", sans-serif;
 }
@@ -200,6 +209,9 @@ TIMELINE STYLING
   grid-row: 2 / span 1;
   padding: 0 4rem;
 }
+.tl-titles {
+  background-color: transparent;
+}
 .timeline-nav-button {
   width: 55px;
   height: 55px;
@@ -217,7 +229,7 @@ TIMELINE STYLING
   color: var(--light-gray);
   padding: 0;
   margin: 0;
-  background-color: var(--black);
+  background-color: transparent;
   border: 0;
 }
 .timeline__content h2 {
@@ -304,6 +316,7 @@ Other sections styling
   display: grid;
   grid-template-rows: 10vh 90vh;
   grid-template-columns: 100%;
+  z-index: 1;
 }
 
 .section-titles {
@@ -548,7 +561,11 @@ Other sections styling
 }
 
 footer {
+  font-size: 1.5rem;
   width: 100%;
+}
+footer > * {
+  display: inline;
 }
 h4 {
   font-family: "PTSans";

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Contact - MorseLane</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <div class="fixed-bg"></div>
+  <body>
+    <div class="contact-container">
+      <div class="menu-container">
+        <div class="burger-menu">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+
+        <nav class="nav">
+          <div><a href="home.html">Home</a></div>
+          <div><a href="about.html">About</a></div>
+          <div><a class="prjNav" href="projects.html">Projects</a></div>
+          <div><a href="contact.html">Contact</a></div>
+        </nav>
+      </div>
+      <form
+        action="https://formsubmit.co/morseylane@gmail.com"
+        method="POST"
+        class="contact-form"
+      >
+        <h1 class="contact-title">Contact</h1>
+        <div class="fields-container">
+          <label for="name"
+            >Name<input
+              type="text"
+              name="name"
+              placeholder="What should I call you?"
+              id="name"
+          /></label>
+
+          <label for="email"
+            >Email<input
+              type="email"
+              name="email"
+              placeholder="yourname@mail.com"
+              id="email"
+          /></label>
+          <label for="subject"
+            >Subject<input
+              type="text"
+              name="subject"
+              placeholder="What's this about?"
+              id="subject"
+          /></label>
+          <label for="content"
+            >Message<textarea
+              type="text"
+              name="content"
+              placeholder="Enter your message..."
+              cols="50"
+              rows="15"
+              id="content"
+            ></textarea>
+            <input type="submit" value="Submit" id="submit" />
+          </label>
+        </div>
+      </form>
+    </div>
+
+    <script src="main.js" async defer></script>
+  </body>
+</html>
