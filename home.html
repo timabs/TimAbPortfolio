@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Morse Lane - Home</title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
     <!--FONT AWESOME ICONS KIT-->
     <script
       src="https://kit.fontawesome.com/e757da3062.js"
@@ -17,7 +20,9 @@
     <!--TIMELINE SKELETON-->
     <link href="Assets/dist/css/timeline.min.css" rel="stylesheet" />
     <script src="Assets/dist/js/timeline.min.js"></script>
+    <!--MAIN STYLESHEETS-->
     <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="homeMobile.css" />
   </head>
   <div class="fixed-bg"></div>
   <span id="toTop"> </span>
@@ -53,7 +58,9 @@
             </a>
             <a href="#links"><i class="icon fa-solid fa-link"></i></a>
           </nav>
-          <p>Site under construction; not formatted for mobile</p>
+          <p class="under-construction">
+            Site under construction; not formatted for mobile
+          </p>
         </header>
         <div id="tl" class="timeline">
           <div class="timeline__wrap">
@@ -334,19 +341,22 @@
                 Gameplay footage of my first video game
               </figcaption>
             </div>
-            <div class="cats-container">
-              <img
-                src="Assets/Images/korra.jpg"
-                alt="Picture of our white ragdoll/siamese hybrid cat named Korra"
-                class="ff-media"
-                id="korra"
-              />
-              <img
-                src="Assets/Images/luka.jpg"
-                alt="Picture of Luka, gray, American longhair(?)"
-                class="ff-media"
-                id="luka"
-              />
+            <div class="cats-container" id="cats-container">
+              <div class="cats">
+                <img
+                  src="Assets/Images/korra.jpg"
+                  alt="Picture of our white ragdoll/siamese hybrid cat named Korra"
+                  class="ff-media"
+                  id="korra"
+                />
+                <img
+                  src="Assets/Images/luka.jpg"
+                  alt="Picture of Luka, gray, American longhair(?)"
+                  class="ff-media"
+                  id="luka"
+                />
+              </div>
+
               <figcaption class="img-captions">
                 Korra (left) & Luka (right)
               </figcaption>

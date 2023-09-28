@@ -1,17 +1,222 @@
-.menu-container.active {
-  grid-template-rows: minmax(10%, auto) auto;
-  width: fit-content;
-  height: fit-content;
-  background-color: #1b1b1b;
-  transition: all 350ms;
-  margin-top: 0%;
+@media (max-width: 768px) {
+  :root {
+    --black: #202124;
+    --matcha: #7e9181;
+    --light-gray: #c7cedb;
+    --med-gray: #a0aab2;
+    --washed-pink: #94849b;
+    --matcha-grayed: #424d43;
+  }
+  .fixed-bg {
+    width: 100vw;
+    height: 100vh;
+  }
+  #indexBody {
+    width: 100vw;
+  }
+
+  .mainContentContainer {
+    grid-template-columns: 12vw 88vw;
+    width: 100vw;
+    padding: 0;
+    grid-template-rows: 5vh repeat(4, 95vh) 10vh;
+  }
+  .menu-container {
+    position: fixed;
+    top: 0;
+    width: unset;
+  }
+  .menu-container.active {
+    grid-template-rows: minmax(10%, auto) auto;
+    width: fit-content;
+    height: fit-content;
+    background-color: #1b1b1b;
+    transition: all 350ms;
+    margin-top: 0%;
+  }
+  .menu-container.active > nav {
+    opacity: 1;
+  }
+  .burger-menu {
+    width: 5vw;
+    height: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 10%;
+    z-index: 2;
+  }
+  .nav {
+    display: grid;
+    opacity: 0;
+    margin: 0;
+    font-size: 125%;
+    padding: 1rem;
+    z-index: 1;
+  }
+  #mainHeader {
+    width: 88vw;
+  }
+  #navbar {
+    height: 5vh;
+    width: 88vw;
+    left: 10%;
+  }
+  .under-construction {
+    display: none;
+    opacity: 0;
+  }
+  main {
+    grid-column: 1 / span 2;
+    grid-template-rows: 5vh repeat(4, 95vh) 10vh;
+    grid-template-columns: 100vw;
+    width: 100vw;
+  }
+  .timeline {
+    width: 100vw;
+    overflow: auto;
+    grid-row: unset;
+    height: 100vh;
+    padding-right: 5rem;
+  }
+  .info-panel > p {
+    font-size: 120%;
+    overflow: scroll;
+    height: 100%;
+  }
+  .home-sec {
+    grid-template-rows: 20vh 80vh;
+  }
+  .section-titles {
+    display: flex;
+    font-size: 3.5rem;
+    align-items: center;
+    width: 100%;
+  }
+  #works-in-progress {
+    width: 100vw;
+    height: 100vh;
+    grid-row: unset;
+  }
+  #wip-title {
+    display: flex;
+    font-size: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .wips-container {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: unset;
+  }
+  .wips-img {
+    min-height: 200px;
+  }
+  .wips-list {
+    height: fit-content;
+  }
+  .wips-li {
+    height: 33%;
+  }
+  .wips-p {
+    font-size: 115%;
+  }
+  #fun-facts {
+    margin-top: 7%;
+  }
+
+  .ff-list {
+    padding-top: unset;
+    height: 100%;
+  }
+  .a-fun-fact {
+    height: fit-content;
+    font-size: 60%;
+  }
+  .ff-imgs-container {
+    display: grid;
+    width: 100vw;
+    height: 35vh;
+    overflow: auto;
+    grid-template-rows: repeat(3, 100%);
+    grid-template-columns: 100vw;
+    justify-content: center;
+    text-align: center;
+    column-gap: 0;
+    row-gap: 1rem;
+    border: var(--washed-pink) 3px solid;
+    border-radius: 1rem;
+  }
+  .ff-imgs-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem;
+  }
+  .feed-jerma-container {
+    grid-column: 1 / span 3;
+    text-align: center;
+  }
+  #cats-container {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    flex-direction: column;
+    height: 90%;
+  }
+  .cats {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    column-gap: 1rem;
+  }
+  .yt-container {
+    grid-row: 3 / span 1;
+  }
+  .ff-media {
+    width: 100%;
+    height: 100%;
+  }
+  #korra {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #luka {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #yt {
+    object-fit: scale-down;
+  }
+  #yt-caption {
+    width: 90%;
+  }
+  .fa-brands {
+    color: white;
+  }
+  footer {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  a {
+    color: var(--light-gray);
+  }
+  #links-title {
+    justify-content: center;
+  }
+  #links {
+    height: 100vh;
+  }
 }
-.burger-menu {
-  width: 5vw;
-  height: 3vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  margin-bottom: 10%;
-}
+
+/* 
+ */

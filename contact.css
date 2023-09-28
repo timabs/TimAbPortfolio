@@ -13,8 +13,14 @@
   margin: 0;
 }
 .fields-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
   margin-left: 1.5rem;
-  width: fit-content;
+  width: 40vw;
+  height: 85vh;
+  background-color: #7e9181;
+  border-radius: 25px;
 }
 label {
   display: flex;
@@ -28,6 +34,11 @@ input {
   font-size: 1.75rem;
   height: 3rem;
   width: 20rem;
+  border-radius: 10px;
+  appearance: none;
+}
+textarea {
+  border-radius: 10px;
 }
 ::placeholder {
   font-family: "Abel";

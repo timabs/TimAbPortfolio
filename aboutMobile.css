@@ -1,0 +1,30 @@
+@media (max-width: 1314px) {
+  body {
+    width: 100vw;
+  }
+  #about-title {
+    text-align: center;
+    justify-content: center;
+  }
+  h3 {
+    font-size: 2.25rem;
+  }
+  .about-section {
+    width: 100vw;
+  }
+  #tag-line {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 2rem;
+  }
+  #me1 {
+    height: 40vh;
+    width: auto;
+  }
+  .about-p {
+    padding: 1rem;
+  }
+}

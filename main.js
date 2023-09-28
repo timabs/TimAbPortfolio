@@ -12,6 +12,7 @@ burgerMenus.forEach((menu) => {
 //Initialize horizontal timeline
 try {
   timeline(document.querySelectorAll(".timeline"), {
+    forceVerticalMode: 768,
     mode: "horizontal",
     visibleItems: 3,
   });
