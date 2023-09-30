@@ -96,7 +96,7 @@
           content: content.value,
         };
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "/.netlify/functions/sendEmail");
+        xhr.open("POST", "https://portfolio-backend-zlwq.onrender.com/form");
 
         xhr.setRequestHeader("content-type", "application/json");
         xhr.onload = function () {

@@ -9,7 +9,9 @@ const user = process.env.EMAIL;
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-
+app.get("/", (req, res) => {
+  res.send("uhhh lemme get uhhh form");
+});
 // app.get("/main.js", (req, res) => {
 //   res.setHeader("Content-Type", "text/javascript");
 //   res.sendFile(__dirname + "/main.js");
