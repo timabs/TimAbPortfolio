@@ -3,3 +3,4 @@ index.js
 .DS_Store
 index.html
 privacypolicy.html
+.ENV

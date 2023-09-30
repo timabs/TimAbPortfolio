@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="homeMobile.css" />
     <link rel="stylesheet" href="contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <div class="fixed-bg"></div>
   <body>
@@ -31,11 +37,7 @@
           <div><a href="contact.html">Contact</a></div>
         </nav>
       </div>
-      <form
-        action="5e19e44244fa0f94ef406f71c0b30a1b "
-        method="POST"
-        class="contact-form"
-      >
+      <form method="POST" class="contact-form">
         <h1 class="contact-title">Contact</h1>
         <div class="fields-container">
           <label for="name"
@@ -78,6 +80,37 @@
         let content = document.getElementById("content");
         content.rows = 10;
       }
+    </script>
+    <script>
+      let contactForm = document.querySelector(".contact-form");
+      let name = document.getElementById("name");
+      let email = document.getElementById("email");
+      let subject = document.getElementById("subject");
+      let content = document.getElementById("content");
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let formData = {
+          name: name.value,
+          email: email.value,
+          subject: subject.value,
+          content: content.value,
+        };
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/form");
+        xhr.setRequestHeader("content-type", "application/json");
+        xhr.onload = function () {
+          if (xhr.responseText == "success") {
+            alert("Email sent");
+            name.value = "";
+            email.value = "";
+            subject.value = "";
+            content.value = "";
+          } else {
+            alert("Something went wrong!");
+          }
+        };
+        xhr.send(JSON.stringify(formData));
+      });
     </script>
     <script src="main.js" async defer></script>
   </body>
