@@ -14,6 +14,7 @@ exports.handler = async (event) => {
         user: user,
         pass: pass,
       },
+      authMethod: "PLAIN",
     });
 
     // Access request data from event.body
