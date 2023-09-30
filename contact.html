@@ -96,7 +96,8 @@
           content: content.value,
         };
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://morselane.com/form");
+        xhr.open("POST", "/.netlify/functions/sendEmail");
+
         xhr.setRequestHeader("content-type", "application/json");
         xhr.onload = function () {
           if (xhr.responseText == "success") {
