@@ -8,6 +8,24 @@ burgerMenus.forEach((menu) => {
     });
   });
 });
+function checkAndDisableLinks() {
+  const iconWrappers = document.querySelectorAll(".icon-wrapper");
+  iconWrappers.forEach((wrapper) => {
+    let wrapperLinks = wrapper.querySelectorAll("a");
+    wrapperLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const grandparent = link.parentElement.parentElement;
+        const gpOpacity = window
+          .getComputedStyle(grandparent)
+          .getPropertyValue("opacity");
+
+        if (gpOpacity === "0") {
+          e.preventDefault(); // Prevent the default action (navigation)
+        }
+      });
+    });
+  });
+}
 
 //Initialize horizontal timeline
 try {
@@ -34,26 +52,8 @@ timelineImages.forEach((img) => {
   });
 });
 
-function checkAndDisableLinks() {
-  const iconWrappers = document.querySelectorAll(".icon-wrapper");
-  iconWrappers.forEach((wrapper) => {
-    let wrapperLinks = wrapper.querySelectorAll("a");
-    wrapperLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        const grandparent = link.parentElement.parentElement;
-        const gpOpacity = window
-          .getComputedStyle(grandparent)
-          .getPropertyValue("opacity");
-
-        if (gpOpacity === "0") {
-          e.preventDefault(); // Prevent the default action (navigation)
-        }
-      });
-    });
-  });
-}
-
 function addImgBlockListeners() {
+  checkAndDisableLinks();
   const imgBlocks = document.querySelectorAll(".image-block");
   imgBlocks.forEach((img) => {
     const copy = img.querySelector(".copy");
