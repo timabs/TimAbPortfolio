@@ -11,6 +11,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="homeMobile.css" />
     <link rel="stylesheet" href="contact.css" />
   </head>
   <div class="fixed-bg"></div>
@@ -31,7 +32,7 @@
         </nav>
       </div>
       <form
-        action="https://formsubmit.co/morseylane@gmail.com"
+        action="5e19e44244fa0f94ef406f71c0b30a1b "
         method="POST"
         class="contact-form"
       >
@@ -64,7 +65,6 @@
               type="text"
               name="content"
               placeholder="Enter your message..."
-              cols="50"
               rows="15"
               id="content"
             ></textarea>
@@ -73,7 +73,12 @@
         </div>
       </form>
     </div>
-
+    <script>
+      if (window.outerWidth <= 768) {
+        let content = document.getElementById("content");
+        content.rows = 10;
+      }
+    </script>
     <script src="main.js" async defer></script>
   </body>
 </html>

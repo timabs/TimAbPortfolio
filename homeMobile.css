@@ -216,6 +216,31 @@
   #links {
     height: 100vh;
   }
+  @media (max-width: 460px) {
+    #navbar {
+      left: 9%;
+    }
+    #fun-facts {
+      height: 100%;
+      margin-top: 15%;
+    }
+    #ff-title {
+      height: fit-content;
+    }
+    .ff-list {
+      height: 50%;
+    }
+    .ff-imgs-container {
+      margin-top: 0;
+      height: 65%;
+      width: 95%;
+      grid-template-columns: 100%;
+    }
+    .ff-imgs-container > div {
+      width: 90%;
+      place-self: center;
+    }
+  }
 }
 
 /* 

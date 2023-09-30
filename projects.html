@@ -8,6 +8,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="projects.css" />
+    <link rel="stylesheet" href="homeMobile.css" />
+    <link rel="stylesheet" href="projectsMobile.css" />
     <title>my projects</title>
   </head>
   <div class="fixed-bg"></div>
@@ -31,7 +33,7 @@
     </header>
     <div class="prj-wrapper">
       <div id="vids-wrapper">
-        <div class="image-block">
+        <div class="image-block p1">
           <img src="Assets/Videos/FeedJerma DEMO.gif" alt="" />
           <p class="copy">
             <b>Title:</b>Feed Jerma<br />
@@ -73,7 +75,7 @@
             >
           </p>
         </div>
-        <div class="image-block">
+        <div class="image-block p2">
           <img src="Assets/jermapong.jpg" alt="" />
           <p class="copy">
             <b>Title:</b> Pong 2: Jerma Pong <br />
@@ -102,7 +104,7 @@
             important outcome
           </p>
         </div>
-        <div class="image-block">
+        <div class="image-block p3">
           <img src="Assets/browser stickies.png" alt="" />
           <p class="copy">
             <b>Title:</b> Browser Stickies! <br />
@@ -142,7 +144,7 @@
             application.
           </p>
         </div>
-        <div class="image-block">
+        <div class="image-block p4">
           <img src="Assets/Images/jerma tribute.png" alt="" />
           <p class="copy">
             <b>Title:</b> Jerma Tribute <br />
@@ -180,7 +182,7 @@
             Jerma's just also a cool dude
           </p>
         </div>
-        <div class="image-block">
+        <div class="image-block p5">
           <img src="Assets/lux lane screenshot.png" alt="" />
           <p class="copy">
             <b>Title:</b> Lux Lane <br />
@@ -240,6 +242,7 @@
       </div>
     </div>
   </body>
+  <script src="main.js" async defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       /*This function disables links whose grandparent elements are not visible 
@@ -247,25 +250,7 @@
       as the opacity of the .copy elements was 0 but they weren't disabled)
       */
       checkAndDisableLinks();
-      const imgBlocks = document.querySelectorAll(".image-block");
-      imgBlocks.forEach((img) => {
-        img.querySelector("img").addEventListener("click", () => {
-          checkAndDisableLinks();
-          const copy = img.querySelector(".copy");
-          img.classList.toggle("active");
-          copy.classList.toggle("visible");
-          imgBlocks.forEach(function (sibling) {
-            if (sibling !== img) {
-              sibling.classList.remove("active");
-            }
-            if (!sibling.classList.contains("active")) {
-              const inactiveCopy = sibling.querySelector(".copy");
-              inactiveCopy.classList.remove("visible");
-            }
-          });
-        });
-      });
+      addImgBlockListeners();
     });
   </script>
-  <script src="main.js"></script>
 </html>

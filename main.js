@@ -15,6 +15,7 @@ try {
     forceVerticalMode: 768,
     mode: "horizontal",
     visibleItems: 3,
+    verticalTrigger: "-1550%",
   });
 } catch (error) {
   throw new Error("Timeline is not defined");
@@ -48,6 +49,42 @@ function checkAndDisableLinks() {
           e.preventDefault(); // Prevent the default action (navigation)
         }
       });
+    });
+  });
+}
+
+function addImgBlockListeners() {
+  const imgBlocks = document.querySelectorAll(".image-block");
+  imgBlocks.forEach((img) => {
+    const copy = img.querySelector(".copy");
+    //initial click on image block
+    img.querySelector("img").addEventListener("click", () => {
+      let siblings = Array.from(img.parentElement.children);
+      siblings.splice(siblings.indexOf(img), 1);
+      console.log(siblings);
+      if (img.classList.contains("active")) {
+        img.classList.remove("active");
+        copy.classList.remove("visible");
+        siblings.forEach((sibling) => {
+          sibling.classList.remove("inactive");
+        });
+      } else if (img.classList.contains("inactive")) {
+        img.classList.remove("inactive");
+        img.classList.add("active");
+        copy.classList.add("visible");
+        siblings.forEach((sibling) => {
+          let siblingCopy = sibling.querySelector(".copy");
+          sibling.classList.remove("active");
+          sibling.classList.add("inactive");
+          siblingCopy.classList.remove("visible");
+        });
+      } else {
+        img.classList.add("active");
+        copy.classList.add("visible");
+        siblings.forEach(function (sibling) {
+          sibling.classList.add("inactive");
+        });
+      }
     });
   });
 }
