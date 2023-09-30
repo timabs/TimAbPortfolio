@@ -96,7 +96,7 @@
           content: content.value,
         };
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "/form");
+        xhr.open("POST", "https://morselane.com/form");
         xhr.setRequestHeader("content-type", "application/json");
         xhr.onload = function () {
           if (xhr.responseText == "success") {
