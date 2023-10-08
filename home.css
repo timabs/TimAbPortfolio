@@ -49,6 +49,9 @@ header {
   justify-content: center;
   align-items: center;
 }
+nav {
+  font-family: "PT Sans";
+}
 #navbar {
   position: fixed;
   grid-row: 1 / span 1;
@@ -102,6 +105,7 @@ h2 {
 }
 a {
   text-decoration: none;
+  color: var(--light-gray);
 }
 a:visited {
   color: aliceblue;

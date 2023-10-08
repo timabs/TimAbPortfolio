@@ -124,6 +124,7 @@ body {
   width: 100%;
   margin-left: 50%;
   margin-top: 15%;
+  font-family: "PT Sans";
 }
 .nav a:hover {
   background-color: unset;
